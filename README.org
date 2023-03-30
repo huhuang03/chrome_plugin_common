@@ -1,0 +1,5 @@
+Some times, we need some ui in chrome extension content script.
+
+It seems too heavy if we import react.
+
+So this lib do something with pure js.
