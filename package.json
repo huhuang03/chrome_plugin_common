@@ -1,9 +1,9 @@
 {
   "name": "chrome_plugin_common",
   "version": "1.0.0",
-  "main": "index.cjs.js",
+  "main": "dist/index.cjs.js",
   "browser": "dist/index.umd.js",
-  "module":  "index.esm.js",
+  "module":  "dist/index.esm.js",
   "license": "MIT",
   "scripts": {
     "build": "rollup -c"

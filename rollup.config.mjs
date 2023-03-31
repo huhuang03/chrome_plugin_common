@@ -20,7 +20,8 @@ export default [
       },
       {
         format: 'umd',
-        file: pkg.browser
+        file: pkg.browser,
+        name: 'chrome_plugin_common'
       }
     ]
   }
