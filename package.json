@@ -1,6 +1,16 @@
 {
   "name": "chrome_plugin_common",
   "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT"
+  "main": "index.cjs.js",
+  "browser": "dist/index.umd.js",
+  "module":  "index.esm.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "rollup -c"
+  },
+  "devDependencies": {
+    "@types/node": "^18.15.11",
+    "rollup-plugin-ts": "^3.2.0",
+    "typescript": "^5.0.2"
+  }
 }
