@@ -5,7 +5,9 @@ const pkg = JSON.parse(readFileSync('package.json', {encoding: 'utf8'}));
 export default [
   {
     plugins: [
-      ts(),
+      ts({
+        tsconfig: 'tsconfig.json'
+      }),
     ],
     input: 'src/index.ts',
     output: [
