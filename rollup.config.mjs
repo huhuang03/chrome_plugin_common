@@ -1,12 +1,13 @@
-import ts from 'rollup-plugin-ts'
-import { readFileSync } from "fs";
+import ts from 'rollup-plugin-ts';
+import {readFileSync} from 'fs';
+
 const pkg = JSON.parse(readFileSync('package.json', {encoding: 'utf8'}));
 
 export default [
   {
     plugins: [
       ts({
-        tsconfig: 'tsconfig.json'
+        tsconfig: 'tsconfig.json',
       }),
     ],
     input: 'src/index.ts',
@@ -18,13 +19,13 @@ export default [
       },
       {
         format: 'es',
-        file: pkg.module
+        file: pkg.module,
       },
       {
         format: 'umd',
         file: pkg.browser,
-        name: 'chrome_plugin_common'
-      }
-    ]
-  }
-]
+        name: 'chrome_plugin_common',
+      },
+    ],
+  },
+];

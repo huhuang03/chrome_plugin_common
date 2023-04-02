@@ -1,5 +1,5 @@
 {
-  "name": "chrome_plugin_common",
+  "name": "@huhuang03/chrome_plugin_common",
   "version": "1.0.0",
   "main": "dist/index.cjs.js",
   "browser": "dist/index.umd.js",
