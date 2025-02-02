@@ -5,6 +5,7 @@ export enum ToastLocation {
 }
 
 export function showToast(msg: string, location: ToastLocation = ToastLocation.top) {
+  initIfNeed()
   eToast.innerText = msg;
   eToast.className = "show";
   setTimeout(function() {
@@ -12,9 +13,13 @@ export function showToast(msg: string, location: ToastLocation = ToastLocation.t
   }, 2000);
 }
 
+let hasInit = false
 
-export function init() {
-  initToast()
+function initIfNeed() {
+  if (!hasInit) {
+    hasInit = true
+    initToast()
+  }
 }
 
 function randomId(len: number = 6) {
