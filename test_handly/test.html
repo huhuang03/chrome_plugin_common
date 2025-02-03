@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test</title>
+</head>
+<body>
+<button id="toastBtn">toast</button>
+<script type="module">
+  import { showToast } from '../dist/index.esm.js';
+
+  document.getElementById('toastBtn').addEventListener('click', () => {
+    showToast("哈哈" + new Date().getTime());
+  });
+</script>
+</body>
+</html>

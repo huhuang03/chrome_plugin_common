@@ -4,13 +4,23 @@ export enum ToastLocation {
   top
 }
 
+let timeoutToast: ReturnType<typeof setTimeout> | null= null
+
+/**
+ * Show toast, but only one toast at same time, previous will close when the new show
+ */
 export function showToast(msg: string, location: ToastLocation = ToastLocation.top) {
   initIfNeed()
+  // not good!!
+  if (timeoutToast) {
+    clearTimeout(timeoutToast)
+    timeoutToast = null
+  }
   eToast.innerText = msg;
   eToast.className = "show";
-  setTimeout(function() {
+  timeoutToast = setTimeout(function() {
     eToast.className = eToast.className.replace("show", "")
-  }, 2000);
+  }, 1200);
 }
 
 let hasInit = false
